@@ -146,6 +146,36 @@ The configured field types guide the AI in:
 - **Validation**: Ensuring numeric fields contain numbers
 - **Accuracy**: Extracting data in the expected format
 
+### Handling Verbose Notes
+
+**Notes can contain more text than template fields!**
+
+The system intelligently handles verbose notes by:
+- **Consolidating extra text** into the `Beskrivelse` or `Description` field
+- **Supporting multi-paragraph descriptions** - no length limits
+- **Preserving context** - all relevant information is retained
+- **Organizing content coherently** - the AI structures the text logically
+
+**Example:**
+If your sticky note contains:
+```
+Bedrift: Acme Corp
+Implementere nytt CRM-system for å øke kundelojalitet.
+Dette vil også forbedre datakvalitet og gi bedre rapportering.
+Vi trenger integrering med eksisterende systemer.
+Risk: Kompleks integrasjon
+3-5
+```
+
+The AI will:
+1. Extract "Acme Corp" → **Bedrift**
+2. Consolidate all the descriptive text → **Beskrivelse**:
+   "Implementere nytt CRM-system for å øke kundelojalitet. Dette vil også forbedre datakvalitet og gi bedre rapportering. Vi trenger integrering med eksisterende systemer."
+3. Extract "Kompleks integrasjon" → **Risk**
+4. Split "3-5" → **Verdivurdering** (3) and **Gjennomførbarhet** (5)
+
+**No need to limit your notes** - write as much detail as you need!
+
 ### Manual Configuration Example
 
 If you choose manual configuration, you'll specify for each field:

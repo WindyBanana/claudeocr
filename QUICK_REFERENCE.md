@@ -137,6 +137,12 @@ v3-f5,null
 4. ✅ Adjust `config.py` if needed
 5. ✅ Then run **Full Batch**
 
+### Writing Notes
+1. ✅ **Write as much detail as needed** - extra text will be consolidated into Beskrivelse
+2. ✅ Use multiple sentences or paragraphs if necessary
+3. ✅ The AI will organize verbose content intelligently
+4. ✅ No need to limit text to fit template columns
+
 ### During Production
 1. ✅ Monitor `review/` folder after each run
 2. ✅ Check `warnings.log` for patterns
@@ -172,6 +178,14 @@ MIN_EXPECTED_NOTES = 0
 1. Columns are named "Verdivurdering" and "Gjennomførbarhet"
 2. They are adjacent in template
 3. Note shows dash clearly: "3-5" not "3/5" or "3 5"
+
+### Notes have more text than template fields
+**Solution:** The system automatically handles verbose notes by:
+- Consolidating extra text into the "Beskrivelse" or "Description" field
+- Supporting multi-paragraph descriptions
+- Preserving all relevant context from the note
+
+**No action needed** - the AI will intelligently map additional text to the description field.
 
 ---
 

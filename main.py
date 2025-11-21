@@ -58,7 +58,15 @@ PROMPT_TEMPLATE = (
     "• Match the expected format/pattern for each field\n"
     "• If text is ambiguous, use your best interpretation\n"
     "• Number notes sequentially from top-left to bottom-right\n"
-    "• Each visually distinct note should be a separate object in the array"
+    "• Each visually distinct note should be a separate object in the array\n\n"
+    "HANDLING ADDITIONAL TEXT:\n"
+    "• Notes may contain MORE text than the defined fields\n"
+    "• If you find relevant text that doesn't clearly map to a specific field:\n"
+    "  - Add it to the 'Beskrivelse' or 'Description' field (if present)\n"
+    "  - Consolidate multiple sentences/paragraphs into this field\n"
+    "  - Keep the information organized and coherent\n"
+    "• Description fields can contain multiple sentences or paragraphs\n"
+    "• Preserve context and meaning when consolidating text"
 )
 
 
@@ -472,11 +480,11 @@ def configure_fields_auto(columns: list[str]) -> list[FieldMetadata]:
                 description="Risk level or description"
             ))
         elif any(keyword in col_lower for keyword in ["beskrivelse", "description", "business"]):
-            # Description fields - longer text
+            # Description fields - longer text, can contain consolidated additional content
             fields.append(FieldMetadata(
                 name=col,
                 data_type="text",
-                description="Usually a sentence or paragraph"
+                description="Main description - may contain multiple sentences/paragraphs. Additional unmapped text should be included here."
             ))
         elif any(keyword in col_lower for keyword in ["bedrift", "company", "organization", "kunde", "customer"]):
             # Entity names
