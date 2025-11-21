@@ -1,4 +1,4 @@
-"""CLI entry point for the Image Transcription tool."""
+"""CLI entry point for Note Transcriber."""
 
 from __future__ import annotations
 
@@ -1087,7 +1087,7 @@ def summarize_run(stats: RunStats) -> None:
 def main() -> None:
     configure_logging()
     ensure_directories()
-    print("Image Transcription Tool")
+    print("Note Transcriber")
     try:
         provider = load_provider_client()
     except RuntimeError as exc:

@@ -1,4 +1,4 @@
-# Claude OCR Setup Script for Windows PowerShell
+# Note Transcriber Setup Script for Windows PowerShell
 # Run this with: powershell -ExecutionPolicy Bypass -File setup.ps1
 
 $ErrorActionPreference = "Stop"
@@ -137,7 +137,7 @@ function Confirm-Action {
 }
 
 # Main script
-Write-Header "Claude OCR Setup Script"
+Write-Header "Note Transcriber Setup Script"
 
 Write-Info "This script will check for uv and install it if needed."
 Write-Host ""

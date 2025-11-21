@@ -1,9 +1,9 @@
 [project]
-name = "image-transcription"
+name = "note-transcriber"
 version = "0.1.0"
-description = "Batch transcription of handwritten or printed notes using Claude"
+description = "AI-powered batch transcription of handwritten and printed sticky notes"
 readme = "README.md"
-authors = [{ name = "Image Transcription Tool" }]
+authors = [{ name = "Note Transcriber" }]
 requires-python = ">=3.12"
 dependencies = [
     "anthropic",

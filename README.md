@@ -1,6 +1,6 @@
-# Image Transcription Tool
+# Note Transcriber
 
-Batch process images containing handwritten or printed notes using Claude or OpenAI vision models.
+AI-powered batch transcription of handwritten and printed sticky notes using Claude or OpenAI vision models.
 
 ## Requirements
 

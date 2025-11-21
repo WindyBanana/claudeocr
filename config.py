@@ -1,4 +1,4 @@
-"""Application configuration for the Image Transcription tool."""
+"""Application configuration for Note Transcriber."""
 
 from __future__ import annotations
 

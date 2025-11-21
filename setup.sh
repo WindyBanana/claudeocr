@@ -207,7 +207,7 @@ setup_project() {
 
 # Main script
 main() {
-    print_header "Claude OCR Setup Script"
+    print_header "Note Transcriber Setup Script"
 
     print_info "This script will check for uv and install it if needed."
     echo ""

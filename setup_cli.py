@@ -1,4 +1,4 @@
-"""Interactive setup assistant for the Image Transcription tool."""
+"""Interactive setup assistant for Note Transcriber."""
 
 from __future__ import annotations
 
@@ -157,7 +157,7 @@ def render_step_table() -> None:
 
 
 def run_setup() -> None:
-    console.print(Panel("Welcome to the Image Transcription setup assistant", style="bold cyan"))
+    console.print(Panel("Welcome to Note Transcriber setup assistant", style="bold cyan"))
     for step in STEPS:
         console.print(f"\n[bold]→ {step.name}[/]")
         step.run()
