@@ -10,22 +10,46 @@ Batch process images containing handwritten or printed notes using Claude or Ope
 
 ## Installation
 
-### macOS
+### Automatic Setup (Recommended)
+
+Run the setup script for your operating system. It will:
+- Check if uv is installed
+- Install uv if needed (with your confirmation)
+- Install Python dependencies
+- Create required folders
+- Set up .env file
+
+**Linux / macOS:**
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+**Windows PowerShell:**
+```powershell
+powershell -ExecutionPolicy Bypass -File setup.ps1
+```
+
+### Manual Installation
+
+If you prefer to install manually:
+
+#### macOS
 ```bash
 brew install uv
 ```
 
-### Linux
+#### Linux
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### Windows
+#### Windows
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-## Setup
+## Manual Setup
 
 1. Clone or download this repository and move into the `claudeocr` directory.
 2. (Optional but recommended) Run the TUI setup helper:
